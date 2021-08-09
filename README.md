@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo is presenting a rubocop issue. To reproduce:
 
-Things you may want to cover:
+- `bundle install`
+- `bundle exec rake rubocop:json_parse_test`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It will ask rubocop for a data in json format and parse it. It will fail the parsing, due to the data being polluted with `The following cops were added to RuboCop` message.
